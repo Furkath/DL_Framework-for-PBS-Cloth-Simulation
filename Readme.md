@@ -43,10 +43,10 @@ Physics-embedded NN structure for machine learning application in Computer Graph
 <img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Ball_simu/ball_simu.gif" alt="demo6ng" width="360" height="360"/> <img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Ball_simu/high_ball_simu.png" alt="demo6np" width="360" height="360" />
 
 ### Cloth Neural Network
-<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/nn.png" alt="demo6np" width="600"  />
+<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/nn.png" alt="s1" width="600"  />
 
 ### Framework Structure
-&emsp; <img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/fra.png" alt="demo6np" width="500"  />
+&emsp; <img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/fra.png" alt="s2" width="500"  />
 
 ## Features
 - Physics-based cloth simulation: mass-spring system
