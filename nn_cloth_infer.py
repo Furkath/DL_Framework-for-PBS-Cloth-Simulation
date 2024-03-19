@@ -418,7 +418,7 @@ def save_staDict(sta_Dict, model_name, save_path):
     torch.save(sta_Dict, save_path + model_name + '.pt')
 
 def load_model(model, model_name, save_path):
-    model.load_state_dict(torch.load(save_path + model_name + '.pt'))
+    model.load_state_dict(torch.load(save_path + model_name ))
 
 def check_device_of_parameters(model): # Iterate through all parameters in the model 
     for name, param in model.named_parameters(): 
