@@ -80,11 +80,11 @@ python nn_cloth_infer.py [initial_state.npz]  [evaluated_model.pt]  [infered_res
 
 #### Check
 ```
-python nn_cloth [checked_data.npz]
+python nn_cloth_check.py [checked_data.npz]
 ```
 
 ### Post-process
-#### Plot loss curve 
+#### Plot loss curves 
 ```
 python plotloss.py [loss_log]
 ```
