@@ -1,5 +1,5 @@
-import sys
 import os
+import sys
 import time
 import numpy as np
 #import scipy.io as sio
@@ -10,6 +10,11 @@ import torch.optim as optim
 from torch.autograd import Variable
 from torch.utils.data import TensorDataset, DataLoader
 
+traindatapath=sys.argv[1]
+modeldatapath=sys.argv[2]
+loaddatapath=""
+if len(sys.argv)==4:
+       loaddatapath=sys.argv[3]
 # os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 #torch.set_default_dtype(torch.float64) #can have bug
@@ -251,11 +256,11 @@ def train(model, pde, init_state, n_iters, learning_rate, dt, batch_size, save_p
             loss_pre = loss_mean
             staDict_pre = copy.deepcopy( model.state_dict() )
         if (epoch+1) % 200 == 0:
-            save_model(model, 'nn_'+str(epoch+1), save_path)
+            save_model(model, 'nn_'+str(epoch+1), modeldatapath)
     
-    save_staDict(staDict_pre,'nn_final', save_path)
+    save_staDict(staDict_pre,'nn_final', modeldatapath)
             #debug inside loop
-            #save_staDict(staDict_pre,'nn_final', save_path)
+            #save_staDict(staDict_pre,'nn_final', modeldatapath)
 
 
 class clothNet(nn.Module):
@@ -393,7 +398,7 @@ def simulate(clonet,hh,num):
     outpy=out.detach().cpu().numpy()
     #outpy=out.numpy()
     #np.savez("simuData",dataX=outpy[:,0:3,:,:],dataV=outpy[:,3:6,:,:])
-    np.savez("simuPressData",dataX=outpy[:,0:3,:,:],dataV=outpy[:,3:6,:,:])
+    np.savez("simuDataPath",dataX=outpy[:,0:3,:,:],dataV=outpy[:,3:6,:,:])
 
 
 def save_model(model, model_name, save_path):
@@ -402,8 +407,8 @@ def save_model(model, model_name, save_path):
 def save_staDict(sta_Dict, model_name, save_path):
     torch.save(sta_Dict, save_path + model_name + '.pt')
 
-def load_model(model, model_name, save_path):
-    model.load_state_dict(torch.load(save_path + model_name + '.pt'))
+def load_model(model, save_path_model_name):
+    model.load_state_dict(torch.load( save_path_model_name ))
 
 def check_device_of_parameters(model): # Iterate through all parameters in the model 
     for name, param in model.named_parameters(): 
@@ -416,7 +421,8 @@ if __name__ == '__main__':
     ################# prepare the input data settings ####################
     dt = 4e-2/128#10.0 / 800
     ################### define the Initial conditions ####################
-    data = np.load("./data/trainData.npz")
+    #data = np.load("./data/trainData.npz")
+    data = np.load(traindatapath)
     #data = np.load("./data/trainPressData.npz")
     xdata = data['dataX']
     vdata = data['dataV']
@@ -437,6 +443,7 @@ if __name__ == '__main__':
     model = CNNBranch().cuda()
     #if continue:
     #load_model(model, 'nn_1200', './model_full_noP_A1/')
+    #load_model(model, loaddatapath)
     pde  = pdeFix().cuda()
     #simu  = clothNet(pressure=press).cuda()
 
