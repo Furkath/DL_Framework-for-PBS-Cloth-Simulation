@@ -443,7 +443,7 @@ if __name__ == '__main__':
     model = CNNBranch().cuda()
     #if continue:
     #load_model(model, 'nn_1200', './model_full_noP_A1/')
-    #load_model(model, loaddatapath)
+    #load_model(model, loaddatapath )
     pde  = pdeFix().cuda()
     #simu  = clothNet(pressure=press).cuda()
 
