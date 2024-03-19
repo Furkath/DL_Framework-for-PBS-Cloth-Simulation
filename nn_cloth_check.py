@@ -404,7 +404,8 @@ def simulate(clonet,hh,num):
     outpy=out.detach().cpu().numpy()
     #outpy=out.numpy()
     #np.savez("simuData",dataX=outpy[:,0:3,:,:],dataV=outpy[:,3:6,:,:])
-    np.savez("simuPressData",dataX=outpy[:,0:3,:,:],dataV=outpy[:,3:6,:,:])
+    #np.savez("simuPressData",dataX=outpy[:,0:3,:,:],dataV=outpy[:,3:6,:,:])
+    np.savez("simudatapath",dataX=outpy[:,0:3,:,:],dataV=outpy[:,3:6,:,:])
 
 
 def save_model(model, model_name, save_path):
@@ -422,12 +423,13 @@ def check_device_of_parameters(model): # Iterate through all parameters in the m
         print(f"Parameter: {name}, Device: {param.dtype}")#param.device
 
 if __name__ == '__main__':
-
+    checkdatapath=sys.argv[1]
     ################# prepare the input data settings ####################
     dt = 4e-2/128#10.0 / 800
     ################### define the Initial conditions ####################
     #data = np.load("./data/trainData.npz")
-    data = np.load("./data/trainPressData.npz")
+    #data = np.load("./data/trainPressData.npz")
+    data = np.load(checkdatapath)
     xdata = data['dataX']
     vdata = data['dataV']
     pdata = data['dataP']
