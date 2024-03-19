@@ -110,25 +110,25 @@ python compare.py [ground_truth.npz] [NN_result.npz]
 ### Blown-up airbag
 
 #### This NN Framework 
-<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/blow_nn.gif" alt="demo1ng" width="360" /> <img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/high_blow_nn.png" alt="demo1np" width="360" />
+<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/blow_nn.gif" alt="demo1ng" width="360" height="360" /> <img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/high_blow_nn.png" alt="demo1np" width="360" />
 
 #### PBS result
-<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/blow_nn.gif" alt="demo2ng" width="360" /> <img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/high_blow_nn.png" alt="demo2np" width="360" />
+<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/blow_simu.gif" alt="demo2ng" width="360" height="360"/> <img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/high_blow_simu.png" alt="demo2np" width="360" />
 
 ### Hanging cloth with wind
 
 #### This NN Framework 
-<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/blow_nn.gif" alt="demo3ng" width="360" /> <img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/high_blow_nn.png" alt="demo3np" width="360" />
+<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Hang_nn/hang_nn.gif" alt="demo3ng" width="360" height="360"/> <img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Hang_nn/high_hang_nn.png" alt="demo3np" width="360" />
 
 #### PBS result
-<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/blow_nn.gif" alt="demo4ng" width="360" /> <img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/high_blow_nn.png" alt="demo4np" width="360" />
+<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Hang_nn/hang_simu.gif" alt="demo4ng" width="360" height="360"/> <img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Hang_nn/high_hang_simu.png" alt="demo4np" width="360" />
 
 ### Fallen cloth folded on ball
 
 #### This NN Framework 
-<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/blow_nn.gif" alt="demo5ng" width="360" /> <img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/high_blow_nn.png" alt="demo5np" width="360" />
+<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Ball_nn/ball_nn.gif" alt="demo5ng" width="360" height="360"/> <img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Ball_nn/high_ball_nn.png" alt="demo5np" width="360" />
 
 #### PBS result
-<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/blow_nn.gif" alt="demo6ng" width="360" /> <img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/high_blow_nn.png" alt="demo6np" width="360" />
+<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Ball_nn/ball_simu.gif" alt="demo6ng" width="360" height="360"/> <img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Ball_nn/high_ball_simu.png" alt="demo6np" width="360" />
 
 
