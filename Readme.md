@@ -49,35 +49,64 @@ Physics-embedded NN structure for machine learning application in Computer Graph
 
 * pytorch $\approx$ 2.1.1
 
-### Recommendations
+### Platforms
  Cuda or CPU backends for simulation and learning; Vulkan available for rendering
 
 ## Usage
 
-### How to play with shooting tube
+### PBS
+#### Bloen-up airbag
 ```
-python play.py
+python cloth_press.py
 ```
-- A(&leftarrow;) & D(&rightarrow;): control the tube to move leftwards and rightwards
-- W(&uparrow;) & S(&downarrow;): increase or decrease the ejecting speed
-- right & left mouse click: control the tube to rotate clockwise and counter-clockwise
-- R: reset the ball and tube
 
-### Quick Start
+#### Hanging cloth with wind
+```
+python cloth_hang.py
+```
 
+#### Fallen cloth folded on ball
+```
+python cloth_ball.py
+```
+
+### NN 
 #### Train
-
 ```
-python train.py ./configs/train.json
+python nn_cloth_train.py [training_data_set.npz]  [MODEL_SAVE_PATH]  [starting_model.pt](Optional)
 ```
 
-#### Eval
-
+#### Infer
 ```
-python eval.py ./configs/eval.json
+python nn_cloth_infer.py [initial_state.npz]  [evaluated_model.pt]  [infered_result_name.npz]
 ```
- -provided models in model_trial1
 
+#### Check
+```
+python nn_cloth [checked_data.npz]
+```
+
+### Post-process
+#### Plot loss curve 
+```
+python plotloss.py [loss_log]
+```
+#### View model parameters
+```
+python viewmodel.py [model.pt]
+```
+#### Rendering for NN predictions
+```
+python cloth_view.py [NN_result.npz]
+```
+#### Comparison between PBS and DL 
+```
+python compare.py [ground_truth.npz] [NN_result.npz]
+```
+
+ -some trained models are provided
+ 
+ -logs are provided for loss track and time consumption
  
 ## Demo
 <!--
