@@ -28,7 +28,9 @@ Physics-embedded NN structure for machine learning application in Computer Graph
 ## Features
 - Physics-based cloth simulation: mass-spring system
 - Comprehensive force interaction
+  
   Internal: elastic, damping, and bending
+  
   External: gravity, pressure, friction, and air drag
 - Collision handling and boundary constraints
 - Deep Learning application for specific PDE system
