@@ -45,6 +45,7 @@ Physics-embedded NN structure for machine learning application in Computer Graph
 
 ## Usage
 ### Pre-process
+#### Training-set preperation 
 ```
 python groundTruth_press.py [DATA_SAVE_PATH]
 ```
