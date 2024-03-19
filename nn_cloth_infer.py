@@ -1,4 +1,5 @@
 import os
+import sys
 import time
 import numpy as np
 #import scipy.io as sio
@@ -8,6 +9,10 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.autograd import Variable
 from torch.utils.data import TensorDataset, DataLoader
+
+initdatapath=sys.argv[1]
+modeldatapath=sys.argv[2]
+infereddatapath=sys.argv[3]
 
 # os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
@@ -397,7 +402,8 @@ def simulate(clonet,hh,num):
         hh = outo
     outpy=out.detach().cpu().numpy()
     #outpy=out.numpy()
-    np.savez("simuHangData",dataX=outpy[:,0:3,:,:],dataV=outpy[:,3:6,:,:])
+    np.savez(infereddatapath,dataX=outpy[:,0:3,:,:],dataV=outpy[:,3:6,:,:])
+    #np.savez("simuHangData",dataX=outpy[:,0:3,:,:],dataV=outpy[:,3:6,:,:])
     #np.savez("simuBallData",dataX=outpy[:,0:3,:,:],dataV=outpy[:,3:6,:,:])
     #np.savez("simuFullData",dataX=outpy[:,0:3,:,:],dataV=outpy[:,3:6,:,:])
     #np.savez("simuCrossData",dataX=outpy[:,0:3,:,:],dataV=outpy[:,3:6,:,:])
@@ -425,7 +431,8 @@ if __name__ == '__main__':
     dt = 4e-2/128#10.0 / 800
     ################### define the Initial conditions ####################
     #data = np.load("./data/trainData.npz")
-    data = np.load("./data/trainPressData.npz")
+    #data = np.load("./data/trainPressData.npz")
+    data = np.load( initdatapath )
     xdata = data['dataX']
     vdata = data['dataV']
     init_state =  np.transpose(np.concatenate((xdata, vdata), axis=3), (0, 3, 1, 2))
@@ -446,7 +453,8 @@ if __name__ == '__main__':
     simu  = clothNet(pressure=press).cuda()
     #load_model(simu.cnncell,"nn_final","./model_fineTune/")
     #load_model(simu.cnncell,"nn_final","./model/")
-    load_model(simu.cnncell,"nn_final","./model_full/")
+    #load_model(simu.cnncell,"nn_final","./model_full/")
+    load_model(simu.cnncell, "", modeldatapath)
 
     #print(model.state_dict())
     #print(pde.state_dict())
