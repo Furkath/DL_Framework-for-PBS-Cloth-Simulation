@@ -44,11 +44,6 @@ Physics-embedded NN structure for machine learning application in Computer Graph
  Cuda or CPU backends for simulation and learning; Vulkan available for rendering
 
 ## Usage
-### Pre-process
-#### Training-set preparation 
-```
-python groundTruth_press.py [DATA_SAVE_PATH]
-```
 
 ### PBS
 #### Blown-up airbag
@@ -64,6 +59,12 @@ python cloth_hang.py
 #### Fallen cloth folded on ball
 ```
 python cloth_ball.py
+```
+
+### Pre-process
+#### Training-set preparation 
+```
+python groundTruth_press.py [DATA_SAVE_PATH]
 ```
 
 ### NN 
