@@ -1,12 +1,3 @@
-train:
-training_data_set  MODEL_SAVE_PATH  starting_model (Optional)
-
-infer:
-initial_data  evaluated_model  infered_result
-
-check:
-checked_data
-
 # Deep Learning Framework for Physics-based Cloth Simulation
 
 Physics-embedded NN structure for machine learning application in Computer Graphics cloth animation. Direct PBS features are encoded into the model, with functional extensions to integrate extra visual improvements.
