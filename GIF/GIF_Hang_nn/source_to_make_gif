@@ -1,0 +1,1 @@
+convert -deconstruct -delay 3 -loop 0 *.png hang_nn.gif
