@@ -61,7 +61,7 @@ python cloth_hang.py
 python cloth_ball.py
 ```
 
-### Pre-process
+### Pre-Process
 #### Training-set preparation 
 ```
 python groundTruth_press.py [DATA_SAVE_PATH]
@@ -83,7 +83,7 @@ python nn_cloth_infer.py [initial_state.npz]  [evaluated_model.pt]  [infered_res
 python nn_cloth_check.py [checked_data.npz]
 ```
 
-### Post-process
+### Post-Process
 #### Plot loss curves 
 ```
 python plotloss.py [loss_log]
@@ -103,14 +103,29 @@ python compare.py [ground_truth.npz] [NN_result.npz]
 
  -some trained models are provided
  
- -logs are provided for loss track and time consumption
+ -logs are provided to check loss track and time consumption
  
 ## Demo
-<!--
-<img src="https://github.com/Furkath/DRL_controlled_fluid-rigid_simulation/blob/master/demos/demo.gif" alt="demo1" width="360" height="360" /> <img src="https://github.com/Furkath/DRL_controlled_fluid-rigid_simulation/blob/master/demos/trained.gif" alt="demo2" width="360" height="360" /> 
+### Blown-up airbag
+#### This NN Framework 
+<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/blow_nn.gif" alt="demo1ng" width="360" /> 
+<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/high_blow_nn.png" alt="demo1np" width="360" />
+#### PBS result
+<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/blow_nn.gif" alt="demo1ng" width="360" /> 
+<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/high_blow_nn.png" alt="demo1np" width="360" />
+### Hanging cloth with wind
+#### This NN Framework 
+<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/blow_nn.gif" alt="demo1ng" width="360" /> 
+<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/high_blow_nn.png" alt="demo1np" width="360" />
+#### PBS result
+<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/blow_nn.gif" alt="demo1ng" width="360" /> 
+<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/high_blow_nn.png" alt="demo1np" width="360" />
+### Fallen cloth folded on ball
+#### This NN Framework 
+<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/blow_nn.gif" alt="demo1ng" width="360" /> 
+<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/high_blow_nn.png" alt="demo1np" width="360" />
+#### PBS result
+<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/blow_nn.gif" alt="demo1ng" width="360" /> 
+<img src="https://github.com/Furkath/DL_Framework-for-PBS-Cloth-Simulation/blob/master/GIF/GIF_Blow_nn/high_blow_nn.png" alt="demo1np" width="360" />
 
--Effects of the AutoEncoder:
-
-<img src="https://github.com/Furkath/DRL_controlled_fluid-rigid_simulation/blob/master/demos/autuoencoder.png" alt="demo3" />
--->
 
