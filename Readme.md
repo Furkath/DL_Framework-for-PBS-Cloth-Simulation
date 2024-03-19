@@ -132,4 +132,8 @@ python compare.py [ground_truth.npz] [NN_result.npz]
  
  -logs are provided to check loss track and time consumption
  
-
+## To-do with the Framework
+- Integrate with additional forces by PBS (e.g., turbulent flow).
+- Add self-collision detection and response:
+  Bounding Volume Hierarchy & vertex-triangle, edge-edge detection.
+- Incorporate sub-NN to refine cloth wrinkles under low-reso mesh.
