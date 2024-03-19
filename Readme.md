@@ -11,7 +11,7 @@ Physics-embedded NN structure for machine learning application in Computer Graph
 - [Installation](#installation)
 - [Usage](#usage)
 - [Demo](#demo)
-- [To do](#Todo)
+- [To-do](#To-do)
 <!-- [Contributing](#contributing) -->
 <!-- [License](#license) -->
 <!-- [Acknowledgements](#acknowledgements) -->
@@ -44,9 +44,13 @@ Physics-embedded NN structure for machine learning application in Computer Graph
  Cuda or CPU backends for simulation and learning; Vulkan available for rendering
 
 ## Usage
+### Pre-process
+```
+python groundTruth_press.py [DATA_SAVE_PATH]
+```
 
 ### PBS
-#### Bloen-up airbag
+#### Blown-up airbag
 ```
 python cloth_press.py
 ```
