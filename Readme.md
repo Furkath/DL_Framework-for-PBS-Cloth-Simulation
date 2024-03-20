@@ -3,7 +3,7 @@
 Physics-embedded NN structure for machine learning application in Computer Graphics cloth animation. Direct PBS features are encoded into the model, with functional extensions to integrate extra visual improvements.
 
 ## Paper available at: 
-- [ArXiv]()
+- [ArXiv](https://arxiv.org/abs/2403.12820)
 
 ## Table of Contents
 
